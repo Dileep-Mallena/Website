@@ -1,0 +1,786 @@
+<!doctype html>
+<!doctype html>
+<html class="l-html">
+
+<head>
+    <meta charset="utf-8">
+    <title>Demo Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/project/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/project/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/project/favicon-16x16.png">
+    <link rel="manifest" href="/favicons/project/site.webmanifest">
+    <link rel="mask-icon" href="/favicons/project/safari-pinned-tab.svg" color="#FCD46A">
+    <link rel="shortcut icon" href="/favicons/project/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="msapplication-config" content="/favicons/project/browserconfig.xml">
+    <meta name="theme-color" content="#FCD46A">
+
+    <link rel="stylesheet" href="/stylesheets/app.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+
+        .weather-widget {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #111111;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-top: 10px;
+        }
+
+        .current-weather {
+            display: flex;
+            align-items: center;
+        }
+
+        .current-weather-icon {
+            font-size: 40px;
+            margin-right: 15px;
+        }
+
+        .current-temperature {
+            font-size: 30px;
+        }
+
+        .current-condition {
+            font-size: 18px;
+            color: #AAAAAA;
+        }
+
+        .forecast {
+            display: flex;
+        }
+
+        .forecast-day {
+            text-align: center;
+            padding: 5px;
+            background-color: #222222;
+            margin-left: 10px;
+            border-radius: 5px;
+        }
+
+        .forecast-day:first-child {
+            margin-left: 0;
+            background-color: #333333;
+        }
+
+        .forecast-icon {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .forecast-temperature {
+            font-size: 14px;
+            color: #AAAAAA;
+        }
+    </style>
+</head>
+
+<body class="l-body">
+     <!-- Weather Widget -->
+     <div class="weather-widget">
+        <div class="current-weather">
+            <div class="current-weather-icon">🌫️</div>
+            <div>
+                <div class="current-temperature">19°C</div>
+                <div class="current-condition">Fog</div>
+            </div>
+
+            <h1 style="margin-left: 30px;">Bangalore</h1>
+        </div>
+        <div class="forecast">
+            <div class="forecast-day">
+                <div>Fri</div>
+                <div class="forecast-icon">⛅</div>
+                <div class="forecast-temperature">30°C 19°C</div>
+            </div>
+            <div class="forecast-day">
+                <div>Sat</div>
+                <div class="forecast-icon">☁️</div>
+                <div class="forecast-temperature">28°C 23°C</div>
+            </div>
+            <div class="forecast-day">
+                <div>Sun</div>
+                <div class="forecast-icon">☁️</div>
+                <div class="forecast-temperature">32°C 23°C</div>
+            </div>
+            <div class="forecast-day">
+                <div>Mon</div>
+                <div class="forecast-icon">☁️</div>
+                <div class="forecast-temperature">26°C 24°C</div>
+            </div>
+            <div class="forecast-day">
+                <div>Tue</div>
+                <div class="forecast-icon">☁️</div>
+                <div class="forecast-temperature">29°C 23°C</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Begin Header Section -->
+    <header class="header">
+
+        
+
+        <div class="header__box">
+
+            <!-- Logo and Navigation -->
+            <h1 style="font-size: large;">Demo Project</h1>
+
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-link">Tools</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-link">Pricing</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-link">Support</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-link highlight">Login</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Menu Toggle -->
+            <a href="#" class="header__mobile-menu sidebar-toggle" data-toggleclass="sidebar-open" data-target="body">
+                <svg class="ico-svg ico-svg__menu">
+                    <use xlink:href="/images/icons.svg#menu"></use>
+                </svg>
+            </a>
+
+        </div>
+
+    </header>
+    <!-- /End Header Section -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-list">
+            <li class="mobile-nav-item"><a href="#">Tools</a></li>
+            <li class="mobile-nav-item"><a href="#">Pricing</a></li>
+            <li class="mobile-nav-item"><a href="#">Support</a></li>
+            <li class="mobile-nav-item"><a href="#">Login</a></li>
+        </ul>
+    </div>
+    <!-- hero block -->
+    <section class="hero">
+        <div class="hero__box">
+            <div class="hero__box-main">
+
+                <div class="hero__logo">
+                    <a href="#" class="hero__logo-link">
+                        <span class="hero__logo-note hero__logo-note--b">Demo</span>
+                        <span class="hero__logo-note hero__logo-note--m">Project</span>
+                    </a>
+                </div>
+
+                <h2 class="hero__title">Create a unique, professional logo for your business</h2>
+                <div class="hero__note">
+                    Kickstart your brand with business card designs, social media graphics, app icons, letter heads and
+                    more
+                </div>
+
+                <div class="hero__action">
+                    <a class="hero__action-btn ui-btn ui-btn--size-normal ui-btn--theme-primary ui-btn--skin-normal"
+                        href="#" target="_blank" tabindex="0"><span class="ui-btn__box"
+                            tabindex="-1">Create my logo</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /End hero block -->
+
+    <!-- slider block -->
+    <div class="slider">
+
+        <div class="slider__list" data-simple-slider>
+
+
+            <div class="slider__item  slider__item--active">
+                <div class="slider__box">
+                    <div class="slider__box-cover">
+                        <img class="slider__box-cover-img slider__box-cover-img--s2" src="/images/slider/pexels-pixabay-265087.jpg"
+                            srcset="/images/slider/slide3@2x.png 2x" alt="PubLaw Project brand design">
+                    </div>
+                    <div class="slider__box-review">
+                        <div class="slider__box-review-box">
+                            <div class="slider__box-review-quote">
+                                I'm not a designer, when I had to make a logo I found myself staring at a blank screen.
+                                DemoProject made the process actually enjoyable
+                                <svg class="ico-svg ico-svg__quote">
+                                    <use xlink:href="/images/icons.svg#quote"></use>
+                                </svg>
+                                <svg class="ico-svg ico-svg__quote-r">
+                                    <use xlink:href="/images/icons.svg#quote-r"></use>
+                                </svg>
+                            </div>
+
+                            <div class="slider__box-user">
+                                <div class="slider__box-user-in">
+                                    <img src="/images/userpic3.png" srcset="/images/userpic3@2x.png 2x"
+                                        alt="Valentyna Kuzmych" class="slider__box-user-ico">
+                                    <div class="slider__box-user-info">
+                                        <div class="slider__box-user-name">Valentyna Kuzmych</div>
+                                        <div class="slider__box-user-position">CEO, PubLaw Project</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider__item">
+                <div class="slider__box">
+                    <div class="slider__box-cover">
+                        <img class="slider__box-cover-img slider__box-cover-img--s2" src="/images/slider/pexels-pixabay-270637.jpg"
+                            srcset="/images/slider/slide2@2x.png 2x" alt="NobleTide brand design">
+                    </div>
+
+                    <div class="slider__box-review">
+                        <div class="slider__box-review-box">
+                            <div class="slider__box-review-quote">
+                                I tried other logo makers and DemoProject is the best value. Quality is exceptional and
+                                includes a complete branding solution for my company
+                                <svg class="ico-svg ico-svg__quote">
+                                    <use xlink:href="/images/icons.svg#quote"></use>
+                                </svg>
+                                <svg class="ico-svg ico-svg__quote-r">
+                                    <use xlink:href="/images/icons.svg#quote-r"></use>
+                                </svg>
+                            </div>
+
+                            <div class="slider__box-user">
+                                <div class="slider__box-user-in">
+                                    <img src="/images/userpic2.png" srcset="/images/userpic2@2x.png 2x"
+                                        alt="Courtney Costrino" class="slider__box-user-ico">
+                                    <div class="slider__box-user-info">
+                                        <div class="slider__box-user-name">Courtney Costrino</div>
+                                        <div class="slider__box-user-position">Founder, Noble Tide LLC</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider__item">
+                <div class="slider__box">
+                    <div class="slider__box-cover">
+                        <img class="slider__box-cover-img slider__box-cover-img--s1" src="/images/slider/slide1.png"
+                            srcset="/images/slider/slide1@2x.png 2x" alt="Hwear brand design">
+                    </div>
+                    <div class="slider__box-review">
+                        <div class="slider__box-review-box">
+
+                            <div class="slider__box-review-quote">
+                                I was afraid to pay thousands for a logo that didn't turn out right for my business. The
+                                DemoProject team helped me create a logo that I love!
+                                <svg class="ico-svg ico-svg__quote">
+                                    <use xlink:href="/images/icons.svg#quote"></use>
+                                </svg>
+                                <svg class="ico-svg ico-svg__quote-r">
+                                    <use xlink:href="/images/icons.svg#quote-r"></use>
+                                </svg>
+                            </div>
+
+                            <div class="slider__box-user">
+                                <div class="slider__box-user-in">
+                                    <img src="/images/userpic1.png" srcset="/images/userpic1@2x.png 2x"
+                                        alt="Sarah Locatelli" class="slider__box-user-ico">
+                                    <div class="slider__box-user-info">
+                                        <div class="slider__box-user-name">Sarah Locatelli</div>
+                                        <div class="slider__box-user-position">Founder, Loctia</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider__page">
+            <div class="slider__page-item slider__page-item--active" data-index="0"></div>
+            <div class="slider__page-item" data-index="1"></div>
+            <div class="slider__page-item" data-index="2"></div>
+        </div>
+    </div>
+    <!-- /End slider block -->
+
+    <!-- logos block -->
+    <div class="logos">
+        <div class="logos__box">
+            <ul class="logos__list">
+                <li class="logos__item">
+                    <img src="/images/logos/l1.png" data-rjs="/images/logos/l1@2x.png" style="width: 7.063em" alt="img"
+                        class="logos__img">
+                </li>
+                <li class="logos__item">
+                    <img src="/images/logos/l2.png" data-rjs="/images/logos/l2@2x.png" style="width: 4.625em" alt="img"
+                        class="logos__img">
+                </li>
+                <li class="logos__item">
+                    <img src="/images/logos/l3.png" data-rjs="/images/logos/l3@2x.png" style="width: 4.875em" alt="img"
+                        class="logos__img">
+                </li>
+                <li class="logos__item">
+                    <img src="/images/logos/l4.png" data-rjs="/images/logos/l4@2x.png" style="width: 7.563em" alt="img"
+                        class="logos__img">
+                </li>
+                <li class="logos__item">
+                    <img src="/images/logos/l5.png" data-rjs="/images/logos/l5@2x.png" style="width: 9.063em" alt="img"
+                        class="logos__img">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /End logos block -->
+
+    <!-- build block -->
+    <div class="build">
+        <div class="build__box">
+            <div class="build__box-row">
+                <div class="build__cover">
+                    <img src="/images/pexels-adrien-casse-3330711-19557055.jpg" srcset="/images/i1@2x.jpg 2x" class="build__cover-img" alt="img">
+                    <div class="build__cover-decor">
+                        <svg class="ico-svg ico-svg--planet">
+                            <use xlink:href="/images/icons.svg#planet"></use>
+                        </svg>
+                    </div>
+                    <div class="build__cover-decor2"></div>
+                </div>
+                <div class="build__main">
+
+                    <div class="build__main-title">
+                        Build a beautiful brand on time and on budget
+                    </div>
+
+                    <div class="build__main-note">
+                        Kickstart your business with thousands of <b>ready-to-use</b> design assets.
+                    </div>
+
+                    <div class="build__main-list">
+
+                        <div class="build__main-list-item">
+                            <svg class="ico-svg ico-svg__doc">
+                                <use xlink:href="/images/icons.svg#doc"></use>
+                            </svg>
+                            <div class="build__main-list-item-note">Logo design files</div>
+                        </div>
+                        <div class="build__main-list-item">
+                            <div class="build__main-list-item-ico">
+                                <svg class="ico-svg ico-svg__profile">
+                                    <use xlink:href="/images/icons.svg#profile"></use>
+                                </svg>
+                                <div class="build__main-list-item-note">Social profile icons</div>
+                            </div>
+                        </div>
+                        <div class="build__main-list-item">
+                            <div class="build__main-list-item-ico">
+                                <svg class="ico-svg ico-svg__card">
+                                    <use xlink:href="/images/icons.svg#card"></use>
+                                </svg>
+                                <div class="build__main-list-item-note">Business card designs</div>
+                            </div>
+                        </div>
+                        <div class="build__main-list-item">
+                            <div class="build__main-list-item-ico">
+                                <svg class="ico-svg ico-svg__favicon">
+                                    <use xlink:href="/images/icons.svg#favicon"></use>
+                                </svg>
+                                <div class="build__main-list-item-note">Animated designs</div>
+                            </div>
+                        </div>
+                        <div class="build__main-list-item">
+                            <div class="build__main-list-item-ico">
+                                <svg class="ico-svg ico-svg__paper">
+                                    <use xlink:href="/images/icons.svg#paper"></use>
+                                </svg>
+                                <div class="build__main-list-item-note">Letterhead templates</div>
+                            </div>
+                        </div>
+
+                        <!--<div class="build__main-list-item">
+            <div class="build__main-list-item-ico">
+              <svg class="ico-svg ico-svg__logo">
+                  <use xlink:href="/images/icons.svg#logo"></use>
+              </svg>
+              <div class="build__main-list-item-note">Logo mockups</div>
+            </div>
+          </div>-->
+
+                        <div class="build__main-list-item">
+                            <div class="build__main-list-item-ico">
+                                <svg class="ico-svg ico-svg__cover">
+                                    <use xlink:href="/images/icons.svg#cover"></use>
+                                </svg>
+                                <div class="build__main-list-item-note">Social media designs</div>
+                            </div>
+                        </div>
+                        <div class="build__main-list-item">
+                            <div class="build__main-list-item-ico">
+                                <svg class="ico-svg ico-svg__presentation">
+                                    <use xlink:href="/images/icons.svg#presentation"></use>
+                                </svg>
+                                <div class="build__main-list-item-note">Presentation templates</div>
+                            </div>
+                        </div>
+                        <div class="build__main-list-item">
+                            <div class="build__main-list-item-ico">
+                                <svg class="ico-svg ico-svg__guide">
+                                    <use xlink:href="/images/icons.svg#guide"></use>
+                                </svg>
+                                <div class="build__main-list-item-note">Brand guide</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="build__main-action">
+                        <a href="#" target="_blank"
+                            class="build__main-action-btn ui-btn ui-btn--size-normal ui-btn--theme-light">
+                            <span class="ui-btn__box" tabindex="-1">
+                                <svg class="ico-svg ico-svg--out">
+                                    <use xlink:href="/images/icons.svg#out"></use>
+                                </svg>
+                                See example assets
+                            </span>
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- /End build block -->
+
+    <!-- chat block -->
+    <div class="chat">
+        <div class="chat__box">
+
+            <div class="chat__box-line">
+                <div class="chat__main">
+                    <div class="chat__main-title">The only logo maker with free customization</div>
+                    <div class="chat__main-note">We’ll personally help you customize your logo with the purchase of any
+                        package.</div>
+                </div>
+
+                <div class="chat__phone">
+
+                    <div class="chat__list">
+
+                        <div class="chat__list-item chat__list-item--s1">
+                            <img src="/images/userpic1.png" srcset="/images/userpic4@2x.png 2x" alt="customer"
+                                class="chat__list-item-userpic">
+                            <div class="chat__list-item-note">
+                                Can you put the icon on a hexagonal container, change the text to green, and also remove
+                                the
+                                tagline
+                            </div>
+                        </div>
+
+                        <div class="chat__list-item chat__list-item--s2">
+                            <img src="/images/userpic5.png" srcset="/images/userpic5@2x.png 2x" alt="Jack"
+                                class="chat__list-item-userpic">
+                            <div class="chat__list-item-note">
+                                <div class="chat__list-item-extra">
+                                    <img src="/images/logos2/la.png" srcset="/images/logos2/la@2x.png 2x"
+                                        alt="Monkspace" class="chat__list-item-extra-img">
+                                    <div class="chat__list-item-txt">
+                                        Sure thing, how does this look?
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- /End chat block -->
+
+
+    <!-- instantly block -->
+    <div class="instantly">
+        <div class="instantly__box">
+            <div class="instantly__main">
+                <div class="instantly__title">Instantly customize and export</div>
+                <div class="instantly__note">Right in your browser, no designer or software needed</div>
+            </div>
+            <div class="instantly__preview">
+                <div class="instantly__preview-box">
+                    <img src="/images/settings.gif" alt="img" class="instantly__preview-img">
+                </div>
+                <div class="instantly__preview-note">
+                    <div class="instantly__preview-info instantly__preview-info--s1">
+                        <div class="instantly__preview-title">Export to all major formats</div>
+                        <div class="instantly__preview-text">Including SVG, EPS, PNG and PDF</div>
+                    </div>
+                    <div class="instantly__preview-info instantly__preview-info--s2">
+                        <div class="instantly__preview-title">Adjust text and image size</div>
+                        <div class="instantly__preview-text">Perfecly sized for web and print</div>
+                    </div>
+
+                    <div class="instantly__preview-info instantly__preview-info--s3">
+                        <div class="instantly__preview-title">Easily edit and customize</div>
+                        <div class="instantly__preview-text">Double click to edit text</div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- /End instantly block -->
+
+    <!-- creations block -->
+    <section class="creations">
+
+        <div class="creations__box">
+
+
+            <div class="creations__list">
+
+
+                <div class="creations__item creations__item--info">
+                    <div class="creations__main">
+                        <div class="creations__main-title">Latest customer creations</div>
+                        <div class="creations__main-note">See why over 108,704 users have
+                            created a logo with DemoProject.io</div>
+                    </div>
+                </div>
+
+
+                <div class="creations__item creations__item--s1">
+                    <img class="creations__item-img" src="/images/pexels-adrien-casse-3330711-19557055.jpg" alt="CIELA MONTESSORI">
+                </div>
+
+                <div class="creations__item creations__item--s2">
+                    <img class="creations__item-img" src="/images/pexels-marketingtuig-185576.jpg" srcset="/images/i2@2x.jpg 2x" alt="No BS">
+                </div>
+
+                <div class="creations__item creations__item--s3">
+                    <img class="creations__item-img" src="/images/pexels-goumbik-574071.jpg" alt="The Local Know">
+                </div>
+
+                <div class="creations__item creations__item--s4">
+                    <img class="creations__item-img" src="/images/pexels-marketingtuig-185576.jpg" alt="YOUTUI">
+                </div>
+
+                <div class="creations__item creations__item--s5">
+                    <img class="creations__item-img" src="/images/pexels-pixabay-270700.jpg" alt="Monkspace">
+                </div>
+
+                <div class="creations__item creations__item--s6">
+                    <img class="creations__item-img" src="/images/pexels-pixabay-60504.jpg" alt="COCO">
+                </div>
+
+                <div class="creations__item creations__item--s7">
+                    <img class="creations__item-img" src="/images/pexels-thisisengineering-3861943.jpg" alt="funfit">
+                </div>
+
+                <div class="creations__item creations__item--s8">
+                    <img class="creations__item-img" src="/images/slider/pexels-sevenstormphotography-704767.jpg" alt="GOOMOE">
+                </div>
+
+                <div class="creations__item creations__item--s9">
+                    <img class="creations__item-img" src="/images/pexels-pixabay-60504.jpg" alt="Wooly Waif">
+                </div>
+
+                <div class="creations__item creations__item--s10">
+                    <img class="creations__item-img" src="/images/i1.jpg" alt="PathBase">
+                </div>
+
+                <div class="creations__item creations__item--s11">
+                    <img class="creations__item-img" src="/images/slider/pexels-pixabay-265087.jpg" alt="BENSON">
+                </div>
+                <div class="creations__item creations__item--s12">
+                    <img class="creations__item-img" src="/images/pexels-pixabay-60504.jpg" alt="Lizzty">
+                </div>
+                <div class="creations__item creations__item--s13">
+                    <img class="creations__item-img" src="/images/thisisengineering-3861943.jpg" alt="lighten">
+                </div>
+                <div class="creations__item creations__item--s14"></div>
+                <div class="creations__item creations__item--s15">
+                    <img class="creations__item-img" src="/images/slider/pexels-pixabay-270637.jpg" alt="COLONETICS">
+                </div>
+                <div class="creations__item creations__item--s16"></div>
+
+            </div>
+        </div>
+
+    </section>
+    <!-- /End creations block -->
+
+    <!-- features block -->
+    <div class="features">
+        <div class="features__box">
+
+            <div class="features__list">
+
+                <div class="features__item features__item--s1">
+                    <div class="features__item-cover">
+                        <svg class="ico-svg ico-svg__s1 features__item-ico">
+                            <use xlink:href="/images/icons.svg#s1"></use>
+                        </svg>
+                    </div>
+                    <div class="features__item-box">
+                        <div class="features__item-title">No more designer anxiety</div>
+                        <div class="features__item-note">Get your logo instantly, not in weeks.</div>
+                    </div>
+                </div>
+
+                <div class="features__item features__item--s2">
+                    <div class="features__item-cover">
+                        <svg class="ico-svg ico-svg__s2 features__item-ico">
+                            <use xlink:href="/images/icons.svg#s2"></use>
+                        </svg>
+                    </div>
+                    <div class="features__item-box">
+                        <div class="features__item-title">Need a tweak to your design?</div>
+                        <div class="features__item-note">We’ll do it for you, absolutely free</div>
+                    </div>
+                </div>
+
+                <div class="features__item features__item--s3">
+                    <div class="features__item-cover">
+                        <svg class="ico-svg ico-svg__s3 features__item-ico">
+                            <use xlink:href="/images/icons.svg#s3"></use>
+                        </svg>
+                    </div>
+                    <div class="features__item-box">
+                        <div class="features__item-title">No monthly charges</div>
+                        <div class="features__item-note">Pay once, get access to our branding tools forever.</div>
+                    </div>
+                </div>
+
+
+                <div class="features__item features__item--s4">
+                    <div class="features__item-cover">
+                        <svg class="ico-svg ico-svg__s4 features__item-ico">
+                            <use xlink:href="/images/icons.svg#s4"></use>
+                        </svg>
+                    </div>
+                    <div class="features__item-box">
+                        <div class="features__item-title">Full copyright included</div>
+                        <div class="features__item-note">For use in commercial and personal projects</div>
+                    </div>
+                </div>
+
+                <div class="features__item features__item--s5">
+                    <div class="features__item-cover">
+                        <svg class="ico-svg ico-svg__s5 features__item-ico">
+                            <use xlink:href="/images/icons.svg#s5"></use>
+                        </svg>
+                    </div>
+                    <div class="features__item-box">
+                        <div class="features__item-title">Unlimited revisions</div>
+                        <div class="features__item-note">Modify your logo at any time, even after purchase</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="features__action">
+                <div class="features__action-title">Create your unique logo design</div>
+                <div class="features__action-note">generate unlimited logos for free</div>
+
+                <a class="features__action-btn ui-btn ui-btn--size-normal ui-btn--theme-normal ui-btn--skin-normal"
+                    href="#" target="_blank" tabindex="0"><span class="ui-btn__box"
+                        tabindex="-1">Create my logo</span></a>
+            </div>
+
+        </div>
+    </div>
+    <!-- /End features block -->
+
+
+
+    <!-- footer block -->
+    <footer class="footer">
+        <div class="footer__box">
+            <div class="footer__row">
+                <div class="footer__section">
+                    <a href="#" target="_blank"
+                        class="footer__section-title footer__section-title--style1">Create your logo</a>
+                    <div class="footer__section-note">Try DemoProject for free, no account needed</div>
+                </div>
+
+                <div class="footer__section">
+                    <a href="mailto:support@DemoProject.io"
+                        class="footer__section-title footer__section-title--style3">Support</a>
+                    <div class="footer__section-note">Have questions or need help? Start here.</div>
+                </div>
+                <div class="footer__section">
+                    <a href="/tools/" class="footer__section-title footer__section-title--style2">Tools</a>
+                    <div class="footer__section-note">Check out our free tools for color, font and logo design</div>
+                </div>
+
+                <div class="footer__section">
+                    <a href="/terms.html" target="_blank" class="footer__section-title"
+                        style="color: #8e999b; margin-right: 3em">Terms of service</a>
+                </div>
+
+                <div class="footer__section">
+                    <a href="/privacy.html" target="_blank" class="footer__section-title" style="color: #8e999b">Privacy
+                        policy</a>
+                </div>
+
+            </div>
+
+            <div class="footer__decor">
+                <div class="footer__decor-item footer__decor-item--s1"></div>
+                <div class="footer__decor-item footer__decor-item--s2"></div>
+            </div>
+        </div>
+    </footer>
+    <!-- /End footer block -->
+
+    </div>
+    </div>
+
+
+    </div>
+
+    <script src="/javascripts/app.js"></script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-52772108-9', 'auto');
+        ga('send', 'pageview');
+
+        function toggleMenu() {
+            var menu = document.getElementById("mobileMenu");
+            menu.classList.toggle("active");
+        }
+
+    </script>
+    <script src="./integrationfiles/index.js"></script>
+
+</body>
+
+</html>
